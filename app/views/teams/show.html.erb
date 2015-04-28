@@ -5,3 +5,7 @@
 <hr id="show-hr">
 
 <a href="/" class="btn btn-info show-return-button">Return Home</a>
+<%= link_to 'Edit Team', edit_team_path(@team), :class => "btn btn-success button-top-margin show-return-button" %>
+<%= link_to 'Delete Team', team_path, method: :delete,
+                                  data: { confirm: "Are you sure?" }, :class => "btn btn-danger button-top-margin show-return-button"%>
+

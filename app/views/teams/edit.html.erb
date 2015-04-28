@@ -1,8 +1,8 @@
-<h1 id>Create a new team</h1>
+<h1 id>Edit your team</h1>
 
     <%= bootstrap_form_for @team do |f| %>
     <%= f.text_field :name, :placeholder =>"Enter a team" %>
     <%= f.text_field :location, :placeholder =>"City"%>
      <%= f.text_field :stadium, :placeholder =>"Stadium" %>
-    <%= f.submit "Add a new team", class: "btn btn-info" %>
+    <%= f.submit "Edit team", class: "btn btn-info" %>
     <% end %>
