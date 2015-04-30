@@ -1,0 +1,7 @@
+<h1>Teams with this Tag</h1>
+
+<hr id="index-hr">
+
+<% @teams.each do |t| %>
+  <li> <%= link_to t.name, t %> </li>
+<% end %>

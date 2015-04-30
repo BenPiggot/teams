@@ -7,17 +7,22 @@ class TeamsController < ApplicationController
 
   def new
     @team = Team.new
+    @tags = Tag.all
   end
 
 
   def create
     @team = Team.create(team_params)
-    redirect_to @team
+    params[:team][:tag_ids].each do |tag|
+    @team.tags << Tag.find(tag) unless tag.blank?
+  end
+    redirect_to teams_path
   end
 
 
   def show
     @team = Team.find(params[:id])
+    @tags = @team.tags
   end
 
 
@@ -30,16 +35,18 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
+    @tags = Tag.all
   end
 
 
   def update
   @team = Team.find(params[:id])
-    if @team.update(team_params)
-      redirect_to @team
-    else
-      render 'edit'
+    @team.update(team_params)
+    @team.tags.clear
+    params[:team][:tag_ids].each do |tag|
+    @team.tags << Tag.find(tag) unless tag.blank?
     end
+      redirect_to @team
   end
 
 
@@ -47,6 +54,10 @@ class TeamsController < ApplicationController
 
   def team_params
     params.require(:team).permit(:name,:location,:stadium)
+  end
+
+  def tag_params
+    params.require(:tags).permit(:names, :ids)
   end
 
 end

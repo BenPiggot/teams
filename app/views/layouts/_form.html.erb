@@ -1,5 +1,3 @@
-<h1>Create a new team</h1>
-
     <%= bootstrap_form_for @team do |f| %>
     <%= f.text_field :name, :placeholder =>"Enter a team" %>
     <%= f.text_field :location, :placeholder =>"City"%>
@@ -7,4 +5,3 @@
     <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
     <%= f.submit "Create a Team", class: "btn btn-info" %>
     <% end %>
-

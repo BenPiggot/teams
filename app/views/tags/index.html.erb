@@ -1,0 +1,11 @@
+<h1>List of Current Tags</h1>
+<%= render 'layouts/flash' %>
+<% @tags.each do |tag| %>
+  <li class="index-list"><%= tag.name %>
+  <span class="glyphs"><%= link_to '', tag_path(tag), method: :delete,
+                                  data: { confirm: "Are you sure?" },
+                                  :class => "btn-xs btn-danger  glyphicon glyphicon-trash"%>
+  <%= link_to '', tag_path(tag.id), :class=>"btn-xs btn-success glyphicon glyphicon-search" %>
+</span>
+ </li>
+<% end %>

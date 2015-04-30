@@ -1,0 +1,85 @@
+ * {
+  font-weight: 200;
+  color: #111;
+ }
+
+#soccer {
+  background-color: #efefef;
+  padding-bottom: 1em;
+}
+
+#soccer::after {
+ content: "";
+ background-image: url("http://cdn.picturecorrect.com/wp-content/uploads/2014/06/sports-photography-1.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ opacity: 0.2;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ position: absolute;
+ z-index: -1;
+}
+
+
+h1 {
+  margin-bottom: 0;
+  font-weight: 100;
+}
+
+li {
+  list-style-type: none
+}
+
+.index-list {
+  list-style-type: none;
+  width: 50%;
+  line-height: 26px;
+}
+
+.glyphs {
+  margin-top: -0.5em;
+  float: right;
+}
+
+.show-para {
+  width: 50%;
+  font-size: 1.2em;
+}
+
+#index-hr {
+  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+  border-color: white;
+}
+
+#show-hr {
+    margin-top: 1em;
+  margin-bottom: 0.6em;
+
+}
+
+.button-top-margin {
+  margin-top: 0.8em;
+  font-weight: 100;
+}
+
+.show-return-button {
+  margin-top: 0.5em;
+  font-weight: 200;
+}
+
+.margin-button-bottom {
+  margin-bottom: 1em;
+}
+
+
+li a {
+  color: white;
+}
+
+li a:hover {
+  text-decoration: none;
+  color: #bbb;
+}

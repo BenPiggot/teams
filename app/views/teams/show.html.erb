@@ -1,11 +1,15 @@
-<h1>Team Included:</h1>
+<h1>Team</h1>
 
-<p> <%= @team.name %> plays in <%= @team.location %> at <%= @team.stadium %>. </p>
+<p class="show-para"> <%= @team.name %> plays in <%= @team.location %> at <%= @team.stadium %>.
 
-<hr id="show-hr">
-
-<a href="/" class="btn btn-info show-return-button">Return Home</a>
-<%= link_to 'Edit Team', edit_team_path(@team), :class => "btn btn-success button-top-margin show-return-button" %>
-<%= link_to 'Delete Team', team_path, method: :delete,
-                                  data: { confirm: "Are you sure?" }, :class => "btn btn-danger button-top-margin show-return-button"%>
-
+<div class="glyphs">
+<%= link_to '', edit_team_path(@team), :class => "btn-xs btn-info glyphicon glyphicon-pencil show-return-button" %>
+<%= link_to '', team_path, method: :delete,
+                                  data: { confirm: "Are you sure?" },
+                                  :class => "btn-xs btn-danger glyphicon glyphicon-trash show-return-button"%>
+</div>
+</p>
+<h4>People think they are:</h4>
+<% @tags.each do |t| %>
+<p><%= t.name %> </p>
+<% end %>

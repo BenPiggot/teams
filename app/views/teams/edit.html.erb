@@ -4,5 +4,6 @@
     <%= f.text_field :name, :placeholder =>"Enter a team" %>
     <%= f.text_field :location, :placeholder =>"City"%>
      <%= f.text_field :stadium, :placeholder =>"Stadium" %>
-    <%= f.submit "Edit team", class: "btn btn-info" %>
+     <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+    <%= f.submit "Edit team", class: "btn btn-info margin-bottom-button" %>
     <% end %>
