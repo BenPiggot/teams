@@ -1,8 +1,8 @@
 require 'flickraw'
 # require 'awesome_print'
 
-FlickRaw.api_key="f4b1ce80af46485e18c007222f6f725b"
-FlickRaw.shared_secret="c4461182866476c2"
+FlickRaw.api_key=ENV["API_KEY"]
+FlickRaw.shared_secret=ENV["API_SECRET"]
 
 class TeamsController < ApplicationController
 
