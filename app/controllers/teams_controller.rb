@@ -1,4 +1,11 @@
+require 'flickraw'
+# require 'awesome_print'
+
+FlickRaw.api_key="f4b1ce80af46485e18c007222f6f725b"
+FlickRaw.shared_secret="c4461182866476c2"
+
 class TeamsController < ApplicationController
+
 
   def index
     @teams = Team.all
@@ -22,6 +29,14 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    p @team.name
+    list = flickr.photos.search :text => @team.name, :sort => "relevance"
+    p list
+    photos = list.map do |i|
+       "https:/farm3.static.flickr.com/#{i["server"]}/" "#{i["id"]}_" "#{i["secret"]}_n.jpg"
+    end
+    @photo = photos.sample
+    p @photo
     @tags = @team.tags
   end
 

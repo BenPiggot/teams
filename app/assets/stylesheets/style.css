@@ -24,13 +24,45 @@
 
 
 h1 {
-  margin-bottom: 0;
-  font-weight: 100;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  font-weight: 200;
+}
+
+
+img {
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-weight: 500;
+  margin-bottom: 0.2em;
 }
 
 li {
   list-style-type: none
 }
+
+/*hr {
+  border-color: #111;
+}*/
+
+.new_team, .new_tag {
+  margin-top: 0;
+  width: 80%;
+  height: 70%;
+}
+
+input.btn.btn-info {
+  font-weight: 200;
+}
+
+.control-label {
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
 
 .index-list {
   list-style-type: none;
@@ -39,25 +71,31 @@ li {
 }
 
 .glyphs {
-  margin-top: -0.5em;
+
   float: right;
 }
 
 .show-para {
-  width: 50%;
-  font-size: 1.2em;
+
+  font-size: 1em;
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 
 #index-hr {
   margin-top: 0.2em;
   margin-bottom: 0.8em;
-  border-color: white;
+  border-color: #111;
 }
 
 #show-hr {
     margin-top: 1em;
   margin-bottom: 0.6em;
+}
 
+.show-header {
+  font-weight: 400;
+  margin-top: 0;
 }
 
 .button-top-margin {
@@ -74,12 +112,19 @@ li {
   margin-bottom: 1em;
 }
 
+#new_team > input.btn.btn-info {
+  margin-bottom: 1em;
+}
+
+.tag-list {
+  margin-bottom: 0.8em;
+}
 
 li a {
-  color: white;
+  color: #111;
 }
 
 li a:hover {
   text-decoration: none;
-  color: #bbb;
+  color: #fff;
 }
