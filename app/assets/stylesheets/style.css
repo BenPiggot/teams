@@ -47,6 +47,9 @@ li {
 /*hr {
   border-color: #111;
 }*/
+.add-team {
+  font-size: 16px;
+}
 
 .new_team, .new_tag {
   margin-top: 0;
@@ -99,7 +102,7 @@ input.btn.btn-info {
 }
 
 .button-top-margin {
-  margin-top: 0.8em;
+  margin-top: 1em;
   font-weight: 100;
 }
 
